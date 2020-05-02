@@ -63,11 +63,11 @@ public class UsuarioService
 		
 		if(usuarioExistente == null)
 		{
-			throw new NegocioException("Usuário e/ou senha inválidos");
+			throw new NegocioException("Usuario e/ou senha invalidos");
 		}
 		else if(!usuarioExistente.getPassword().equals(login.getPassword()))
 		{
-			throw new EmailNaoExisteException("Usuário e/ou senha inválidos");
+			throw new EmailNaoExisteException("Usuario e/ou senha invalidos");
 		}		
 	
 		usuarioExistente.setLastLogin(OffsetDateTime.now());
