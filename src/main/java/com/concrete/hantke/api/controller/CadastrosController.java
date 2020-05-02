@@ -29,7 +29,6 @@ public class CadastrosController
 	@Autowired
 	private UsuarioService usuarioService;
 	
-	//@GetMapping(produces = { "application/json"}, headers = "Accept=application/json,Content-type=application/json")
 	@GetMapping(produces = { "application/json"}, headers = "Content-type=application/json")
 	public List<Usuario> listar() {
 		return usuarioRepository.findAll();
