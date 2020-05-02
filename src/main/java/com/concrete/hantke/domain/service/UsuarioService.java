@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.concrete.hantke.config.JwtTokenUtil;
 import com.concrete.hantke.domain.exception.EmailNaoExisteException;
 import com.concrete.hantke.domain.exception.NegocioException;
+import com.concrete.hantke.domain.exception.PasswordInvalidoException;
 import com.concrete.hantke.domain.exception.SessaoInvalidaException;
 import com.concrete.hantke.domain.exception.TokenNaoPermitidoException;
 import com.concrete.hantke.domain.repository.UsuarioRepository;
@@ -63,11 +64,11 @@ public class UsuarioService
 		
 		if(usuarioExistente == null)
 		{
-			throw new NegocioException("Usuario e/ou senha invalidos");
+			throw new EmailNaoExisteException("Usuario e/ou senha invalidos");
 		}
 		else if(!usuarioExistente.getPassword().equals(login.getPassword()))
 		{
-			throw new EmailNaoExisteException("Usuario e/ou senha invalidos");
+			throw new PasswordInvalidoException("Usuario e/ou senha invalidos");
 		}		
 	
 		usuarioExistente.setLastLogin(OffsetDateTime.now());
