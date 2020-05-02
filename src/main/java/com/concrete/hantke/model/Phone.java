@@ -49,10 +49,6 @@ public class Phone {
 
 	public Phone() {
 		super();
-	}
-	
-	
-	
-	
+	}	
 
 }

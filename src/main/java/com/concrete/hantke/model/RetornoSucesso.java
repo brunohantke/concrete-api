@@ -3,16 +3,9 @@ package com.concrete.hantke.model;
 import java.time.OffsetDateTime;
 import java.util.UUID;
 
-import org.springframework.beans.factory.annotation.Autowired;
-
-import com.concrete.hantke.domain.repository.RegistroLoginRepository;
-
 
 public class RetornoSucesso 
 {
-	
-	@Autowired
-	private RegistroLoginRepository registroLoginRepository;
 	
 	private UUID id;
 	
@@ -72,9 +65,5 @@ public class RetornoSucesso
 	public void setToken(String token) {
 		this.token = token;
 	}
-	
-	
-	
-	
 	
 }

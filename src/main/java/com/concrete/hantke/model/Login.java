@@ -19,6 +19,4 @@ public class Login
 		this.password = password;
 	}
 	
-	
-	
 }
