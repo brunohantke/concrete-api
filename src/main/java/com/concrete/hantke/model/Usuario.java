@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "usuario")
@@ -26,9 +27,11 @@ public class Usuario
 	@Column(name = "id", unique = true, columnDefinition = "BINARY(16)")
 	private UUID id;
 	
+	@NotNull
 	private String name;
 	
 	@Email
+	@NotNull
 	private String email;	
 
 	@ElementCollection
