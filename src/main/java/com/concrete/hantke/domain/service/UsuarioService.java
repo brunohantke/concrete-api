@@ -66,7 +66,7 @@ public class UsuarioService
 		{
 			throw new EmailNaoExisteException("Usuario e/ou senha invalidos");
 		}
-		else if(!usuarioExistente.getPassword().equals(login.getPassword()))
+		else if(!new BCryptPasswordEncoder().matches(usuarioExistente.getName() + login.getPassword(),usuarioExistente.getPassword()))
 		{
 			throw new PasswordInvalidoException("Usuario e/ou senha invalidos");
 		}		
