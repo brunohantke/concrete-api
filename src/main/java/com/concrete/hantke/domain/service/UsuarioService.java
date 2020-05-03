@@ -79,6 +79,12 @@ public class UsuarioService
 	
 	public Usuario perfil(UUID id, String token)
 	{
+		
+		if (token.contains("Bearer"))
+		{
+			token.replace("Bearer ", "");
+		}
+		
 		Usuario usuarioExistenteToken = usuarioRepository.findByToken(token);
 		
 		if (usuarioExistenteToken == null)
