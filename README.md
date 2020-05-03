@@ -7,7 +7,7 @@ Endpoint para cadastro, login e perfil de usuário
 [concrete-api-hantke](https://concreteapihantke.herokuapp.com:443)
 https://concreteapihantke.herokuapp.com:443
 
-## Get para retornar os usuario do banco
+## Get para retornar os usuários do banco
 curl --location --request GET 'https://concreteapihantke.herokuapp.com:443/cadastro' \
 --header 'Content-Type: application/json'
 
